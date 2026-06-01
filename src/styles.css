@@ -37,7 +37,8 @@ p,
 a,
 label,
 button,
-input {
+input,
+select {
   font-size: 18px;
 }
 
@@ -50,6 +51,39 @@ a {
   gap: 16px;
 }
 
+.signup-shell {
+  max-width: 720px;
+}
+
+.steps {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  border-bottom: 3px solid #cfd9d2;
+  color: #65726a;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.steps .active {
+  border-color: #167245;
+  color: #16201a;
+}
+
+.wizard-form {
+  background: #fff;
+  border: 1px solid #d6ded8;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(22, 32, 26, 0.1);
+  padding: 24px;
+}
+
 label {
   display: grid;
   gap: 6px;
@@ -57,10 +91,16 @@ label {
 }
 
 input,
-button {
+button,
+select {
   border: 1px solid #9aa89d;
   border-radius: 6px;
   padding: 12px 14px;
+}
+
+input,
+select {
+  background: #fbfcfd;
 }
 
 button {
@@ -68,6 +108,34 @@ button {
   color: #fff;
   cursor: pointer;
   font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.secondary {
+  background: #fff;
+  color: #16201a;
+}
+
+.summary {
+  background: #f2f5f3;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.summary p {
+  margin: 0;
 }
 
 .status {
